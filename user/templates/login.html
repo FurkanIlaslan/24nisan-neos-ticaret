@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Sayfası</title>
+
+</head>
+<body>
+    {% block content %}
+        <div class="container">
+            <form action="" method="POST" class="w-50 m-auto mt-4">
+                {% csrf_token %}
+                <label for="">Kullanıcı Adı</label>
+                <input type="text" placeholder="Kullanıcı Adınızı Giriniz" name="kullanici" class="form-kontrol">
+                <label for="">Şifre</label>
+                <input type="password" placeholder="Şifrenizi Giriniz" name="sifre" class="form-kontrol">
+                <input type="submit" class="btn btn-outline-warning mt-3" value="Giriş Yap">
+            </form>
+        </div>
+    {% endblock content %}
+</body>
+</html>
