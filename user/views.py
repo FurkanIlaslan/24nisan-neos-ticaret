@@ -27,6 +27,7 @@ def userLogin(request):
 
         if kullanici is not None:
             login(request,user)
+            print("Merhaba")
             return redirect('index')
 
     return render(request, 'login.html')
